@@ -1,0 +1,17 @@
+.home-hero {
+    position: relative;
+    height: 100vh;
+
+    .background{
+        @include absolute();
+        object-fit: cover;
+    }
+    h1{
+        position: absolute;
+        bottom: 200px;
+        left: 100px;
+        color: #fff;
+        z-index: 1;
+    }
+}
+
