@@ -1,0 +1,31 @@
+/* defaults */
+.section-toptitle {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+    
+    @include responsiveMin("tablet-h") {
+        font-size: 35px;
+    }
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.2;
+    
+    @include responsiveMin("tablet-h") {
+        font-size: 110px;
+    }
+}
+
+.section-text {
+    font-size: 14px;
+    line-height: 1.5;
+
+    @include responsiveMin("tablet-h") {
+        font-size: 22px;
+    }
+    
+}
+/* end defaults */

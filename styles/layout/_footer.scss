@@ -1,36 +1,76 @@
-.site-footer {
-  @include row();
-
-  &__cont {
-    padding: 30px 0;
-  }
-
-  &__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
-
-    @include responsive('tablet-h') {
-      grid-template-columns: repeat(1, 1fr);
-      margin: 0 auto;
-      width: 768px;
-      max-width: 100%;
+.section-footer {
+    padding: 0 0 40px;
+    margin-top: 125px;
+    
+    @include responsiveMin('tablet-h') {
+        padding: 0 0 50px;
+        margin-top: 90px;
     }
-  }
+    
+    &__row {
+        display: grid;
+        padding: 115px 0 25px;
+        margin: 0 20px;
+        
+        border-top: 1px solid $primary;
+        
+        gap: 30px;
+        grid-template-columns: 100%;
+        justify-content: space-between;
+        
+        @include responsiveMin('tablet-h') {
+            padding: 70px 0 40px;
+        }
+        
+        @include responsiveMin('desktop') {
+            grid-template-columns: 1fr 1fr;
+            margin: 0;
+        }
+    }
 
-  &__column {
-    position: relative;
-  }
+    &__brand {
+        position: relative;
+    }
 
-  &__title {
-    @include fontsizes(h6);
-    color: $primary-color;
-    margin-bottom: 20px
-  }
+    &__logo {
+        max-width: 180px;
+        margin-bottom: 5px;
+        
+        @include responsiveMin('tablet-h') {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .section-title {
+        padding-left: 46px;
+        
+        font-size: 14px;
+        font-weight: 500;
+        
+        @include responsiveMin('tablet-h') {
+            padding-left: 80px;
+            font-size: 25px;
+        }
+    }
+
+    &__copy {
+        position: relative;
+        display: flex;
 
 
-  .copyright {
-    @include fontsizes(h6);
-    color: $primary-color;
-  }
+        @include responsiveMin('desktop') {
+            justify-content: flex-end;
+        }
+
+        .section-text {
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            
+            @include responsiveMin('mobile-h') {
+                font-size: 12px;
+            }
+        }
+    }
 }

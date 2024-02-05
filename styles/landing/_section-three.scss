@@ -1,0 +1,29 @@
+.section-three {
+    .container-logos {
+        position: relative;        
+        background: white;
+
+
+        .logo-wrapper {
+            display: flex;
+            min-height: 130px; 
+            background: white;
+            padding: 0 20px;
+            
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            
+            
+            @include responsiveMin("tablet-h") {
+                min-height: 150px;
+                //padding: 0px;
+            }
+
+            img {
+                height: auto;
+                max-width: 100%;
+            }
+        }
+    }
+}

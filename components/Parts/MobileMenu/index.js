@@ -1,4 +1,4 @@
-import { PageContext } from "context/page";
+import { PageContext } from "/context/page";
 import { useContext } from "react";
 
 export const MobileMenu = (props) => {

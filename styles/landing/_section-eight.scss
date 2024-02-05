@@ -1,0 +1,164 @@
+.section-eight {
+    position: relative;
+    padding: 105px 0 0;
+    overflow: hidden;
+
+    color: white;
+
+    background: linear-gradient(118deg, rgba(14, 24, 66, 0.65) 21.62%, rgba(151, 29, 245, 0.52) 78.32%), url(/images/realmone-fundo-3.webp) top left/130% no-repeat;
+    
+    @include responsiveMin('mobile-v') {
+        background: linear-gradient(118deg, rgba(14, 24, 66, 0.65) 21.62%, rgba(151, 29, 245, 0.52) 78.32%), url(/images/realmone-fundo-3.webp) center/cover no-repeat;
+        background-position: 0px -60px;
+        background-size: 150%;
+
+        .shape-mask {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 51%;
+            top: 0;
+            right: 0px;
+            background-color: $grey;
+        }
+    }
+
+    @include responsiveMin('tablet-h') {
+        padding: 220px 0 0;
+        background-position: 0 50%;
+        background-size: cover;
+    }
+
+    .section-toptitle{
+        margin-bottom: 10px;
+        @include fade(0,100px, true, 0);
+        
+        @include responsiveMin('tablet-v') {
+            margin-bottom: 15px;
+            font-size: 34px;
+        }
+    }
+
+    .section-title {
+        //margin-bottom: 20px;
+        width: 80%;
+        line-height: 1.1;
+        
+        @include fade(0,100px, true, .5);
+
+        @include responsiveMin('mobile-v') {
+            margin-bottom: 20px;
+        }
+
+        @include responsiveMin('tablet-v') {
+            font-size: 116px;
+            margin-bottom: 30px;
+        }
+    }
+    
+    .section-text {
+        position: relative;
+        left: -20px;
+        width: calc(100% + 40px);
+        margin-top: 60px;
+        padding: 35px 20px 20px;
+        font-size: 14px;
+        line-height: 1.6;
+        background-color: $dark;
+        
+        @include fade(100px,0px, true, 2);
+        
+        @include responsiveMin('mobile-v') {
+            left: 32%;
+            width: 68%;
+            margin: 0;
+            padding: 65px 40px;
+            font-size: 18px;
+            line-height: 1.5;
+            background-color: transparent;
+        }
+        @include responsiveMin('tablet-v') {
+            padding: 125px 70px 115px 70px;
+            font-size: 21px;
+            line-height: 1.7;
+        }
+
+        @include responsiveMin('desktop-s') {
+            width: 80%;
+            padding: 125px 100px 115px 100px;
+        }
+        
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            width: 30%;
+            height: 100%;
+            
+            content: "";
+            background: linear-gradient(311deg, rgba(151, 29, 245, 0.35) -36.65%, rgba(53, 26, 117, 0.00) 158.58%);
+            
+            transition: $transition-default;
+            transform: scaleX( var(--v1,0) );
+            transform-origin: 100% 0;
+            transition-delay: 0s;
+
+            @include responsiveMin('mobile-v') {
+                width: 300%;
+                opacity: .75;
+                background: linear-gradient(0deg, #971df5 -54.81%, #0e1842 87.65%);
+            }
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: 30%;
+            bottom: 0;
+            width: 70%;
+            height: 100%;
+            background-color: $dark;
+            z-index: -1;
+
+            @include responsiveMin('mobile-v') {
+                bottom: 0;
+                left: -200%;
+                width: 200%;
+                height: 80px;
+            }
+        }
+
+        .shape-text {
+            position: absolute;
+            z-index: -1;
+            top: -45px;
+            left: 30%;
+            width: 70%;
+            height: 45px;
+            background: linear-gradient(135deg, #971DF5 20.26%, rgba(#0e1842, .75) 94.35%);
+            
+            @include responsiveMin('mobile-v') {
+                top: 0;
+                left: -40%;
+                width: 46%;
+                height: 53px;
+                background: linear-gradient(135deg, #971DF5 20.26%, rgba(151, 29, 245, 0.00) 94.35%);
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    z-index: -1;
+                    top: 0;
+                    right: 0;
+                    width: 13%;
+                    height: 53px;
+                    background: linear-gradient(270deg, rgba(151, 29, 245, 0.65) -0.6%, rgba(14, 24, 66, 0.65) 119.36%);
+
+                }
+            }
+        }
+
+    }
+}

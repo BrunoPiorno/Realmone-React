@@ -1,0 +1,343 @@
+.hero {
+    background: linear-gradient(342deg, #6C1CBD -14.62%, #0E1842 69.02%);
+    overflow: hidden;
+
+    @include responsiveMin('tablet-h') {
+        background: linear-gradient(347deg, #6c1cbd 22.6%, #0e1842 69.61%);
+    }
+    
+    .hero-shapes{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY( calc( var(--elementDistance, 0) * .2px ) );
+    }
+
+    .section-hero {
+        position: relative;
+        min-height: 430px;
+
+        @include responsiveMin('tablet-h') {
+            min-height: 100dvh;
+        }
+
+        .shape-circle-1 {
+            position: absolute;
+            top: -42%;
+            left: calc(37% - 325px);
+            width: 325px;
+            height: auto;
+
+            opacity: .6;
+            border-radius: 50%;
+            background: linear-gradient(210deg, #971df5 -3.76%, rgba(73, 27, 143, 0) 85.95%);
+
+            aspect-ratio: 1/1;
+
+            @include responsiveMin("tablet-h") {
+                top: -400px;
+                left: calc(47% - 721px);
+                width: 721px;
+            }
+
+            @include fade(0,-100px, true, 1);
+        }
+
+        .shape-circle-2 {
+            position: absolute;
+            top: 265px;
+            left: -120px;
+            width: 180px;
+
+            height: auto;
+
+            opacity: .6;
+            border-radius: 50%;
+            background: linear-gradient(36deg, #971df5 -21.64%, rgba(73, 27, 143, .00) 104.08%);
+
+            aspect-ratio: 1/1;
+
+            @include fade(-100px,0px, true, 2);
+
+            @include responsiveMin('tablet-h') {
+                top: 465px;
+                left: -14%;
+                
+                width: 452px;
+            }
+            @include responsiveMin('desktop-l') {
+                left: -10%;
+            }
+        }
+
+        .shape-video-1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 63%;
+            height: 390px;
+
+            //background: url("../images/shape-video.webp") center/cover no-repeat;
+
+            @include fade(100px,0px, true, 3);
+
+            @include responsiveMin('tablet-h') {
+                width: 53%;
+                height: 780px;
+            }
+
+            video {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                opacity: .45;
+            }
+
+            .video-filter {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                content: "";
+                
+                @include responsiveMin('mobile-h') {
+                    background: linear-gradient(55deg, #971DF5 -3.13%, rgba(76, 27, 147, 0.00) 81.83%);    
+                }
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    content: "";
+                    background: linear-gradient(90deg, #0F1943 -75.05%, rgba(151, 29, 245, 0.00) 56.32%);
+                }
+            }
+
+            &:before {
+                position: absolute;
+                bottom: -225px;
+                left: 30px;
+                width: 51px;
+                height: 205px;
+
+                content: "";
+
+                background: url('/images/shape-2.svg') center/contain no-repeat;
+
+                @include responsiveMin('desktop-l') {
+                    left: 50px;
+                }
+            }
+
+            &:after {
+                position: absolute;
+                bottom: -120px;
+                right: -30px;
+                width: 150px;
+                height: 180px;
+
+                content: "";
+
+                background: url('/images/shape-3.svg') center/220px no-repeat;
+
+                @include responsiveMin('tablet-h') {
+                    bottom: -170px;
+                    right: 0px;
+                    width: 220px;
+                    height: 220px;
+                }
+
+                @include responsiveMin('desktop-l') {
+                    right: 110px;
+                }
+            }
+
+        }
+
+        .shape-button-1 {
+            position: absolute;
+            top: 430px;
+            left: calc(37% - 60px - 58px); // minus this width and before witdh
+
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //transform: translateX(calc(-50% - 88px));
+            
+
+            background: linear-gradient(45deg, #971df5 -36.65%, rgba(53, 26, 117, .00) 100%);
+
+            //@include fade(0px,100px, true, 4);
+            opacity: var( --v1, 0 );
+            margin-top: calc(100px * var( --v0, 1 ) ) ;
+            transition: $transition-default;
+            transition-delay: .6s; 
+
+            svg {
+                max-height: 75%;
+            }
+
+            &:before,
+            &:after {
+                position: absolute;
+
+                content: "";
+            }
+
+            &:before {
+                top: -40px;
+                left: 100%;
+                width: 58px;
+                height: 40px;
+
+                background: linear-gradient(140deg, #971df5 20.26%, rgba(53, 26, 117, .00) 104.35%);
+
+            }
+
+            @include responsiveMin("tablet-h") {
+                top: 780px;
+                left: calc(47% - 165px - 303px - 96px); // minus this width and before and after witdh
+                
+                width: 165px;
+                height: 165px;
+
+                &:before {
+                    top: -60px;
+                    left: 100%;
+                    width: 303px;
+                    height: 60px;
+                }
+
+                &:after {
+                    top: 0;
+                    left: calc(165px + 303px);
+
+                    width: 96px;
+                    height: 96px;
+
+                    background: linear-gradient(320deg, #971df5 -36.65%, rgba(53, 26, 117, .00) 158.58%);
+                }
+            }
+
+            @include responsiveMin("desktop-l") {
+                left: calc(47% - 165px - 346px - 96px); // minus this width and before and after witdh
+
+                &:before {
+                    width: 346px;
+                }
+                &:after {
+                    left: calc(165px + 346px);
+                }
+
+            }
+        }
+    }
+
+    .hero-text {
+        position: relative;
+        margin: 0;
+        font-size: 52px;
+        font-weight: 500;
+        color: #fff;
+
+        @include responsiveMin('tablet-v') {
+            font-size: 100px;
+        }
+
+        @include responsiveMin('tablet-h') {
+            margin: 0 0 15px;
+            font-size: 170px;
+        }
+        
+        //margin-left: -15px;
+        span{
+            @include fade(0,100px, true, 1);
+            display: block;
+            line-height: 1; 
+        }
+
+        &:before {
+            position: absolute;
+            top: -100px;
+            right: -10px;
+            width: 100%;
+            height: 1px;
+            
+            content: "";
+            
+            background: $primary;
+            
+            transition: $transition-default;
+            transform: scaleX( var(--v1, 0) );
+            transform-origin: 0 0;
+            transition-delay: .5s;
+            
+            @include responsiveMin('tablet-h') {
+                top: 90px;
+                right: 0;
+                
+                width: 400px;
+                height: 2px;
+            }
+        }
+        
+        &:after {
+            position: absolute;
+            top: -15px;
+            left: -95px;
+            width: 90px;
+            height: 90px;
+            
+            content: "";
+            
+            background: url('/images/shape-text.svg') center/contain no-repeat;
+
+            transition: $transition-default;
+            transform: scale( var(--v1, 0) );
+            transform-origin: 75% 75%;
+            transition-delay: .6s;
+
+            @include responsiveMin('tablet-h') {
+                top: 0px;
+                left: -220px;
+                
+                width: 220px;
+                height: 215px;    
+            }
+        }
+    } 
+
+    .hero-desc {
+        position: relative;
+        margin: 10px 5px 0;
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 400;
+        color: white;
+        @include fade(0,100px, true, 2);
+        
+        @include responsiveMin('tablet-v') {
+            font-size: 25px;
+        }
+
+        @include responsiveMin('tablet-h') {
+            margin: 0 15px;
+            font-size: 29px;
+            line-height: 1.5;
+        }
+
+        /* @include responsiveMin('desktop-l') {
+            margin: 20px;
+        } */
+    }
+
+}

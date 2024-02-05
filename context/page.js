@@ -62,6 +62,7 @@ export const PageWrapper = ({ value, children }) => {
     >
       <div
         className={`
+        hero
         pagecontainer
         ${menuOpened ? "menuopen" : ""}
         ${bodyIn ? " bodyin " : ""} 

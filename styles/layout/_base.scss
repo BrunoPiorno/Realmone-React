@@ -1,0 +1,302 @@
+
+
+@font-face {
+    font-family: "Borna";
+    font-style: normal;
+    font-weight: 400;
+
+    font-display: swap;
+    src: url("/fonts/borna-regular-webfont.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Borna";
+    font-style: normal;
+    font-weight: 500;
+
+    font-display: swap;
+    src: url("/fonts/borna-medium-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Borna";
+    font-style: normal;
+    font-weight: 600;
+
+    font-display: swap;
+    src: url("/fonts/borna-semibold-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Borna";
+    font-style: normal;
+    font-weight: 700;
+
+    font-display: swap;
+    src: url("/fonts/borna-bold-webfont.woff2") format("woff2");
+}
+
+$breakpoints: (
+  'mobile-s': 400px,
+  'mobile-v': 600px,
+  'mobile-h': 750px,
+  'tablet-v': 900px,
+  'tablet-h': 1050px,
+  'desktop-s': 1200px,
+  'desktop': 1440px,
+  'desktop-l': 1600px
+) !default;
+
+@mixin responsiveMin($width) {
+  @if map-has-key($breakpoints, $width) {
+    $width: map-get($breakpoints, $width);
+
+    @media only screen and (min-width: $width) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "No value could be retrieved from `#{$width}`. Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+
+// fonts
+$font-family: 'Borna', sans-serif;
+//$font-weight-light: 300;
+//$font-weight-regular: 400;
+//$font-weight-heavy: 700;
+$font-height: 1.5;
+
+// colors
+$primary: #971DF5;
+$dark: #0E1842;
+$grey: #F6F4F9;
+
+// universal
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+* {
+  font-family: $font-family;
+  //color: $dark-grey;
+  line-height: $font-height;
+  box-sizing: border-box;
+  
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+.grecaptcha-badge {
+  display: none!important;
+}
+
+// typography
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+a.link-hover {
+  position: relative;
+  transition: all ease-in-out .32s;
+  z-index: 1;
+  
+  color: $primary!important;
+  text-decoration: underline;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    left: -5px;
+    width: 0%;
+    height: calc(100% + 10px);
+    background: $dark;
+    transition: all ease-in-out .32s;
+  }
+  
+  &:hover {
+    color: white!important;
+
+    &:before {
+      width: calc(100% + 10px);
+    }
+  }
+}
+
+.text-highlight {
+  color: $primary!important;
+}
+
+/* .font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-heavy {
+  font-weight: $font-weight-heavy;
+}
+ */
+
+// utility
+.bg-white {
+  background-color: white;
+
+  * {
+    color: $dark;
+  }
+}
+
+.bg-grey {
+  background-color: $grey;
+
+  * {
+    color: $dark;
+  }
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+.container {
+  display: block;
+  max-width: 1340px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include responsiveMin('desktop-l') {
+    max-width: 1480px;
+  }
+
+  &-md {
+    max-width: 1120px;
+
+    @include responsiveMin('desktop-l') {
+      max-width: 1230px;
+    }
+  }
+
+  &-sm {
+    width: 70%;
+    
+    @include responsiveMin('tablet-h') {
+      width: 100%;
+      max-width: 920px;
+    }
+    
+    @include responsiveMin('desktop-l') {
+      max-width: 1010px;
+    }
+  }
+
+  .row {
+    margin: 0 20px;
+
+    @include responsiveMin('desktop') {
+      margin: 0;
+    }
+  }
+}
+
+  
+
+
+.in {
+  --fade-opacity: 1;
+  --fade-transform: translateX(0px) translateY(0px);
+  --p100: 100%;
+  --v1: 1;
+  --v0: 0;
+}
+@mixin fade($x: 0px, $y: 0px, $transition: true, $delay: 0) {
+  opacity: var(--fade-opacity, 0);
+  transform: var(--fade-transform, translateX($x) translateY($y));
+
+  @if $transition {
+    transition: $transition-default;
+  }
+
+  @if $delay >0 {
+    transition-delay: $transition-default-delay * $delay;
+  }
+
+}
+$transition-default: all 1s cubic-bezier(0.165, 0.840, 0.440, 1.000
+);
+$transition-default-delay: .2s;

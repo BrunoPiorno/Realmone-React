@@ -1,68 +1,26 @@
 @charset 'UTF-8';
-/*
-Theme Name: Palermo
-Text Domain: palermo
-*/
 
-// Configuration and helpers
-@import 
-  'abstracts/_variables',
-  'abstracts/_functions',
-  'abstracts/_mixins';
-
-// Base stuff
-@import 
-  'base/_typography',
-  'base/_base';
-
-// Components
-@import 
-  'components/_menu',
-  'components/_search',
-  'components/_socials',
-  'components/_button',
-  'components/_forms',
-  'components/_posts',
-  'components/_animations',
-  'components/_breadcrumb';
-
-// Hero
-@import 
-  '../components/Blocks/HeroHomeHero/styles',
-  '../components/Blocks/HeroPageHero/styles';
-
-
-// Layout 
-@import 
-  'layout/_header',
-  'layout/_footer';
-
-// Vendor
-@import 
-  'vendors/_fontawesome_brands',
-  'vendors/_fancybox',
-  'vendors/_swiper'
+// 
+@import 'layout/_base',
+'layout/_icons-grid',
+'layout/_buttons',
+'layout/_forms',
+'layout/_footer'
 ;
 
-
-// Blocks
-@import 
-  '../components/Blocks/Core/styles',
-  '../components/Blocks/LatestNews/styles',
-  '../components/Blocks/ParallaxImage/styles',
-  '../components/Blocks/ImageAndText/styles'
+// 
+@import 'landing/_landing',
+'landing/_section-hero',
+'landing/_section-one',
+'landing/_section-two',
+'landing/_section-three',
+'landing/_section-four',
+'landing/_section-five',
+'landing/_section-six',
+'landing/_section-seven',
+'landing/_section-eight',
+'landing/_section-nine'
 ;
 
-/*  
-// Woocommerce
-@import
-  'woocommerce/_header_cart',
-  'woocommerce/_header_account',
-  'woocommerce/_rating_stars',
-  'woocommerce/_item',
-  'woocommerce/_archive',
-  'woocommerce/_single',
-  'woocommerce/_cart',
-  'woocommerce/_checkout',
-  'woocommerce/_account';
-*/
+@import 'navbar/_navbar'
+;

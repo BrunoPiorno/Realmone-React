@@ -48,7 +48,7 @@ module.exports = {
       "2.gravatar.com",
       "secure.gravatar.com",
       "bracketmedia.com",
-      "palermo-headless.local"
+      "realmone-headless.local"
     ],
   },
 };

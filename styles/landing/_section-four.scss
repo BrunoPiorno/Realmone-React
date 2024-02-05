@@ -1,0 +1,18 @@
+
+.section-four {
+    padding: 40px 0;
+
+    @include responsiveMin('tablet-h') {
+        padding: 55px 0;
+    }
+    
+    .section-text {
+        font-weight: 400;
+        line-height: 1.5;
+        @include fade(0,100px, true, 0);
+        
+        @include responsiveMin('tablet-h') {
+            line-height: 34.302px;
+        }
+    }
+}

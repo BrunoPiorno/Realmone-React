@@ -1,0 +1,156 @@
+.section-seven {
+    padding: 25px 0 45px;
+    
+    @include responsiveMin('tablet-h') {
+        padding: 105px 0 165px;
+    }
+    
+    &__grid {
+
+        display: grid;
+
+        grid-template-columns: 44% 56%;
+        grid-template-rows: auto;
+        gap: 25px 0;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "title image"
+        "desc desc";
+        
+        @include responsiveMin('mobile-h') {
+            gap: 0 40px;
+            grid-template-rows: auto;
+            grid-template-columns: 42% 52%;
+            grid-template-areas:
+            "image title"
+            "image desc";
+        }
+        
+        @include responsiveMin('tablet-h') {
+            gap: 0px;
+            grid-template-rows: 45% 1fr;
+        }
+        
+        &__image {
+            grid-area: image;
+            margin-top: auto;
+        }
+        &__title {
+            grid-area: title;
+            margin-top: auto;
+            margin-bottom: 30px;
+            @include responsiveMin('mobile-h') {
+                margin-bottom: 0;
+            }
+        }
+        &__desc {
+            grid-area: desc;
+        }
+    }
+
+    .section-image {
+        @include fade(0,100px, true, 1);
+
+        img {
+            max-width: 450px;
+        }
+    }
+
+    .section-wrapper {
+        padding: 0 35px;
+        order: -1;
+
+    }
+
+    .section-toptitle {
+        //padding-top: 25px;
+        color: $dark;
+        font-weight: 500;
+        margin-bottom: 5px;
+        @include fade(0,100px, true, 0);
+
+        @include responsiveMin('tablet-h') {
+            //padding-top: 40px;
+            font-size: 34px;
+        }
+    }
+
+    .section-title {
+        position: relative;
+        font-size: 42px;
+
+        color: $primary;
+
+        @include responsiveMin('mobile-h') {
+            font-size: 64px;
+        }
+        
+        @include responsiveMin('tablet-h') {
+            font-size: 84px;
+        }
+
+        @include responsiveMin('desktop-s') {
+            font-size: 110px;
+        }
+        
+        span{
+            @include fade(0,100px, true, .5);
+            display: block;
+            color: $primary;
+            line-height: 1.2;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            bottom: -40px;
+            width: 235px;
+            height: 30px;
+            background: linear-gradient(68deg, #971DF5 38.39%, rgba(151, 29, 245, 0.00) 116.1%);
+            transition: $transition-default;
+            transform: scaleY( var(--v1, 0) );
+        }
+
+
+        @include responsiveMin('mobile-h') {
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                top: -175px;
+                right: -60px;
+                bottom: unset;
+                left: unset;
+                width: 2px;
+                height: 130px;
+                background-color: $primary;
+                
+                
+                @include responsiveMin('tablet-h') {
+                    height: 270px;
+                }
+            }
+            &:after {
+                transform: rotate(90deg) scaleY( var(--v1, 0) );
+            }
+        }
+    }
+
+    .section-text {
+        margin: 15px 0 25px;
+        font-size: 14px;
+        line-height: 1.55;
+        @include fade(0,100px, true, 1);
+
+        @include responsiveMin('mobile-h') {
+            margin: 10px 0 35px;
+            font-size: 21px;
+            line-height: 1.65;
+        }
+    }
+
+    .section-button {
+        @include fade(0,100px, true, 1.5);
+    }
+}

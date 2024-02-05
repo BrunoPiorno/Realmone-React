@@ -1,20 +1,26 @@
-
 import { Core } from "./Core";
-import { HeroPageHero } from "./HeroPageHero";
-import { HeroHomeHero } from "./HeroHomeHero";
-import { LatestNews } from "./LatestNews";
-import { ParallaxImage } from "./ParallaxImage";
 import { ImageAndText } from "./ImageAndText";
-import { BloqueDePrueba } from "./BloqueDePrueba";
 import { TextBlock } from "./TextBlock";
+import { TitleAndText } from "./TitleAndText";
+import { GridLogos } from "./GridLogos";
+import { OnlyText } from "./OnlyText";
+import { ImageBlock } from "./ImageBlock";
+import { Contact } from "./Contact";
+import { OurCapabilities } from "./OurCapabilities";
+import { OnYourMission } from "./OnYourMission";
+import { Hero } from "./Hero";
+
 
 export const gutenbergBlocks = { 
     Core, 
-    HeroPageHero, 
-    HeroHomeHero,
-    LatestNews,
-    ParallaxImage,
     ImageAndText,
-    BloqueDePrueba,
+    Hero,
+    TitleAndText,
+    GridLogos,
+    OnlyText,
+    ImageBlock,
+    OurCapabilities,
+    OnYourMission,
+    Contact,
     TextBlock
 }

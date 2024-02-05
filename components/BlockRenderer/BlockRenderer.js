@@ -1,5 +1,5 @@
-import { gutenbergBlocks } from "@/Blocks/index.js";
-import { dashCasetoPascalCase } from "utils/dashCasetoPascalCase";
+import { gutenbergBlocks } from "../Blocks/index.js";
+import { dashCasetoPascalCase } from "../../utils/dashCasetoPascalCase";
 
 export const BlockRenderer = ({ pageBlocks }) => {
     

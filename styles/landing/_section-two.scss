@@ -1,0 +1,38 @@
+.section-two {
+    
+    margin-top: -70px;
+    padding: 0 0 110px;
+    
+    @include responsiveMin("tablet-h") {
+        margin-top: 0;
+        padding: 30px 0 60px;
+    }
+
+    .section-wrapper {
+        display: grid;
+        grid-template-columns: 90%;
+        
+        @include responsiveMin("tablet-h") {
+            grid-template-columns: 72%;
+        }
+    }
+
+    .section-title {
+        margin-bottom: 10px;
+
+        font-size: 18px;
+
+        color: #fff;
+        @include fade(0px, 100px, true, 0);
+
+
+        @include responsiveMin("tablet-h") {
+            font-size: 30px;
+        }
+    }
+
+    .section-text {
+        color: #fff;
+        @include fade(0px, 100px, true, 2);
+    }
+}

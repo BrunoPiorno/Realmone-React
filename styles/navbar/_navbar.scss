@@ -1,0 +1,40 @@
+.site-navbar {
+    position: relative;
+    display: block;
+    width: 100%;
+    //position: absolute;
+    padding-top: 15px;
+    padding-bottom: 140px;
+    
+    z-index: 5;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-logo {
+        display: inline-flex;
+        padding: 5px 0;
+
+        img {
+            max-width: 200px;
+        }
+    }
+
+    @include responsiveMin('tablet-h') {
+        padding-top: 40px;
+        padding-bottom: 130px;
+
+        .site-logo {
+            display: inline-flex;
+            padding: 5px 0;
+
+            img {
+                max-width: 380px;
+            }
+        }
+
+    }
+}

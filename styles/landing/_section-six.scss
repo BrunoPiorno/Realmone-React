@@ -1,0 +1,55 @@
+
+.section-six {
+    .title-wrapper {
+        position: relative;
+
+        width: 220px;
+        padding: 30px 0 25px;
+
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.2;
+
+        letter-spacing: .8px;
+        text-transform: uppercase;
+
+        color: $primary;
+        border-bottom: 1px solid $primary;
+        background: $grey;
+
+        @include fade(-100px,0px, true, 0);
+
+
+        @include responsiveMin('tablet-h') {
+            padding: 35px 0 20px;
+            font-size: 18px;
+            line-height: 2;
+        }
+        
+        @include responsiveMin('desktop-l') {
+            width: 252px;    
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            left: -1000%;
+            
+            width: 1000%;
+            height: calc(100% + 1px);
+            
+            content: "";
+            
+            border-bottom: 1px solid $primary;
+            background: $grey;
+        }
+        &:after {
+            left: 100%;
+
+            @include responsiveMin('mobile-h') {
+                display: none;
+            }
+        }
+    }
+}

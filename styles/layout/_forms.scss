@@ -1,0 +1,154 @@
+/* =============================== */
+/*        Layout Formulario        */
+/* =============================== */
+
+.responsive-form {
+    width: 100%;
+    max-width: 600px /*-- change this to get your desired form width --*/;
+
+    margin: 0 auto;
+}
+.form-row {
+    width: 100%;
+	margin: 0 0 5px 0;
+	display: inline-block;
+    
+    @include responsiveMin("mobile-h") {
+        margin: 10px 0;
+    }
+}
+.column-half,
+.column-full {
+    position: relative;
+
+    float: left;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    @include responsiveMin("mobile-h") {
+        padding: 0 10px;
+    }
+
+    small {
+        font-size: 14px;
+        
+        @include responsiveMin("mobile-h") {
+            font-size: 16px;
+        }
+    }
+}
+.column-half:first-of-type {
+    margin: 0 0 10px 0;
+
+    @include responsiveMin("mobile-h") {
+        margin: 0 0 25px 0;
+    }
+}
+.clearfix:after {
+    display: table;
+    clear: both;
+
+    content: "";
+}
+
+/* .wpcf7-spinner {
+    display: block!important;
+		margin: -2rem auto 1rem auto;
+} */
+
+/**--- Media Query ---**/
+@media only screen and (min-width: 48em) {
+    .column-half {
+        width: 50%;
+    }
+    .column-half:first-of-type {
+        margin: 0;
+    }
+    
+}
+
+/* =============================== */
+/*            Form Style           */
+/* =============================== */
+label {
+    visibility: hidden;
+    display: block;
+    height: 0;
+}
+/* ------------ Inputs ----------- */
+input[type=email], input[type=number], input[type=password], input[type=reset], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea, input[type=email], input[type=number], select {
+    /*font-family: "Poppins", Sans-serif;*/
+    padding: 9px 15px 6px;
+    font-weight: 400;
+    font-size: 16px;
+    width: 100%;    
+    color: $dark;
+    border-width: 0;
+    border-color: rgb(61 60 61 / 70%);
+    border-radius: 0;
+    background: linear-gradient(306deg, #FFF -209.12%, #E4E1E7 87.88%);
+    //background: #FFF;
+    border-bottom: 1.5px solid $primary;
+    
+    @include responsiveMin("tablet-h") {
+        padding: 11px 16px 7px;
+        letter-spacing: -0.3px;
+    }
+
+    @include responsiveMin("desktop-l") {
+        padding: 11px 20px 7px;
+    }
+}
+:focus-visible {
+    outline: 1px solid var( --e-global-color-primary );
+}
+::placeholder {
+    color: $dark;
+    font-size: 14px;
+
+    @include responsiveMin("tablet-h") {
+        font-size: 16px;
+    }
+}
+
+/* .wpcf7 form .wpcf7-response-output {
+    margin: 0;
+    border-radius: 1rem;
+    background-color: #eeeeee;
+    text-align: center;
+} */
+
+.sending {
+    &:after {
+        background: url('/images/loader.svg') center center/contain no-repeat;
+        animation: spin infinite 2s linear;
+    }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.thank-you {
+    position: relative;
+    padding: 85px 50px 84px 90px;
+    background: linear-gradient(244deg, #971DF5 10.98%, #0E1842 149.67%);
+
+    &__title {
+        background: linear-gradient(251deg, rgba(14, 24, 66, 0.90) 10.64%, rgba(151, 29, 245, 0.90) 137.58%);
+        padding: 25px 50px 12px;
+        display: inline-block;
+        margin: 0px 0 35px -130px;
+        font-size: 68px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: white;
+    }
+
+    &__text {
+        font-size: 22px;
+    }
+}

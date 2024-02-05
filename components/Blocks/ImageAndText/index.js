@@ -1,29 +1,40 @@
 import Image from "next/image";
-import { Observer } from "@/components/Helpers/Observer";
-import { Text } from "@/components/Helpers/Text/Text";
-import { Button } from "@/components/Parts/Button";
+import Link from "next/link";
+import { Observer } from "/components/Helpers/Observer";
 
 export const ImageAndText = ({ data }) => {
-  
+
   return (
-    <Observer className={`image-and-text align-${data.image_position} `} >
-      <div className="container">
-        <div className="content">
-        {data.image && 
-        <figure>
-          <Image src={data.image.url} width={1980} height={900} alt={data.image.alt} />
-        </figure>
-        }
-        {data.text &&  // esto imprime esat seccion solo si data.text tiene algo
-        <div className="text-col">
-          <Text>
-            {data.text}
-          </Text>
-          <Button button={data.link_field} style="secondary" />
-        </div>
-        }
-        </div>
-      </div>
-    </Observer>
+    <section className="bg-white">
+      <Observer className="section-seven bg-grey" data-waypoint=".25">
+        <div className="container">
+          <div className="row section-seven__grid">
+              <div className="section-seven__grid__image">
+                <div className="section-image">
+                  {data.image && 
+                    <picture>
+                      <source srcSet="/images/realmone-people-focused-mobile.webp" media="(max-width:750px)" />
+                      <Image className="img-fluid" src={data.image.url} width={1980} height={900} alt={data.image.alt} />
+                    </picture>
+                  }
+                </div>
+              </div>
+
+              <div className="section-seven__grid__title">
+                {data.after_title && <div className="section-toptitle">{data.after_title}</div>}
+                {data.title &&  <div className="section-title"><span>{data.title}</span></div>}
+              </div>
+
+              <div className="section-seven__grid__desc">
+                {data.description && <div className="section-text">{data.description}</div>}
+                {data.link &&
+                  <div className="section-button">
+                      <Link className="button button--link" target={data.link.target ? data.link.target : ""} href={data.link.url}><span>{data.link.title}</span></Link>
+                  </div>}
+              </div>
+            </div>
+          </div>
+      </Observer>
+    </section>
   );
 };

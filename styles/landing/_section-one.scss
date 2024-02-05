@@ -1,0 +1,107 @@
+.section-one {
+    position: relative;
+    padding: 115px 0 190px;
+
+    @include responsiveMin('tablet-h') {
+        padding: 50px 0 160px;
+    }
+
+    .shape-bottom {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-50%);
+        
+        @include responsiveMin('tablet-h') {
+            width: 1120px;            
+        }
+        
+        @include responsiveMin('desktop-l') {
+            width: 1230px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 110px;
+            //left: -4%;
+            right: -5%;
+            width: 410px;
+            height: auto;
+
+            opacity: .6;
+            border-radius: 50%;
+            background: linear-gradient(317deg, #971DF5 -111.76%, rgba(73, 27, 143, 0) 81.47%);
+            aspect-ratio: 1/1;
+
+            @include fade(100px, 0, true, 1);
+
+            @include responsiveMin('tablet-v') {
+                width: 650px;
+            }
+
+            @include responsiveMin('tablet-h') {
+                bottom: 40px;
+                right: unset;
+                left: 37%;
+                width: 910px;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+
+            bottom: 110px;
+            left: 20px;
+            width: 47%;
+            height: 40px;
+            background: linear-gradient(120deg, #971DF5 20.26%, rgba(151, 29, 245, 0.00) 104.35%);
+
+            @include responsiveMin('tablet-v') {
+                bottom: 95px;
+                left: 20px;
+                width: 65%;
+                height: 50px;                
+            }
+            
+            @include responsiveMin('tablet-h') {
+                bottom: 30px;
+                left: 5px;
+                
+                width: 889px;
+                height: 69px;
+            }
+
+            transition: $transition-default;
+            transform: scaleX( var(--v1, 0) );
+            transform-origin: 0 0;
+            transition-delay: .4s;
+        }
+    }
+
+    .section-text {
+        position: relative;
+
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.55;
+            
+        color: #fff;
+        
+        @include fade(0px, 100px, true, 3);
+        
+        @include responsiveMin('tablet-v') {
+            font-size: 32px;
+            letter-spacing: 0px;
+        }
+        
+        @include responsiveMin('tablet-h') {
+            font-size: 38px;
+            line-height: 1.7;
+        
+        }
+    }
+}

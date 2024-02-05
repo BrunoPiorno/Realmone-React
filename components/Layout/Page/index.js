@@ -1,8 +1,8 @@
-import { BlockRenderer } from "components/BlockRenderer";
-import { Header } from "components/Layout/Header";
-import { Footer } from "components/Layout/Footer";
+import { BlockRenderer } from "/components/BlockRenderer";
+import { Header } from "/components/Layout/Header";
+import { Footer } from "/components/Layout/Footer";
 
-import { PageWrapper } from "context/page";
+import { PageWrapper } from "/context/page";
 import Head from "next/head";
 
 export const Page = (props) => {

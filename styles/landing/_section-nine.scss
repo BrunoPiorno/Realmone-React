@@ -1,0 +1,275 @@
+.section-nine {
+    position: relative;
+
+    padding: 80px 0 0;
+
+    color: white;
+    background: linear-gradient(326deg, #6c1cbd -21.98%, #0e1842 47.11%);
+
+    @include responsiveMin('tablet-h') {
+        padding: 110px 0 0;
+    }
+
+    .shape-circle-1 {
+        position: absolute;
+        top: 7%;
+        right: 6%;
+        width: 420px;
+        height: auto;
+
+        opacity: .6;
+        border-radius: 50%;
+        background: linear-gradient(292deg, rgba(151, 29, 245, 0.65) -13.13%, rgba(73, 27, 143, 0.00) 68.04%);
+
+        aspect-ratio: 1/1;
+        @include fade(0,-100px, true, 0);
+
+        @include responsiveMin("tablet-h") {
+            top: -10%;
+            right: -10%;
+            
+            width: 822px;
+        }
+
+        @include responsiveMin("desktop-l") {
+            top: -5%;
+            right: 0%;
+        }
+    }
+
+    .shape-circle-2 {
+        position: absolute;
+        bottom: 10px;
+        right: -63%;
+        width: 441px;
+        height: auto;
+
+        opacity: .6;
+        border-radius: 50%;
+        background: linear-gradient(354deg, #971DF5 -0.63%, rgba(73, 27, 143, 0.00) 60.61%);
+        
+        aspect-ratio: 1/1;
+        @include fade(0,100px, true, 1);
+        
+        @include responsiveMin('tablet-h') {
+            bottom: -15%;
+            left: -30%;
+            width: 861px;
+            background: linear-gradient(49deg, #971DF5 -49.25%, rgba(73, 27, 143, 0.00) 89.49%);
+        }
+
+        @include responsiveMin('desktop-l') {
+            bottom: -15%;
+            left: -18%;
+        }
+    }
+
+    &__row {
+
+
+        @include responsiveMin('tablet-h') {
+            display: grid;
+            
+            grid-template-columns: 60%;
+            
+            &--form {
+                grid-template-columns: 40% 60%;
+                justify-content: space-between;
+                padding-top: 10px;
+                
+                @include responsiveMin('desktop') {
+                    gap: 120px;
+                    grid-template-columns: 40% 50%;
+                }
+            }
+        }
+
+
+        .section-title {
+            position: relative;
+            margin: 0 0 10px;
+            
+            line-height: 0.8;
+            
+            @include fade(0,100px, true, 0);
+            
+            @include responsiveMin('tablet-h') {
+                margin: 0 0 50px;
+                line-height: .6;
+                letter-spacing: 1px;
+            }
+
+            &:before {
+                position: absolute;
+                bottom: 0px;
+                left: -120px;
+                width: 85px;
+                height: 2px;
+
+                content: "";
+
+                background: $primary;
+                transform: scaleX( var(--v1, 0) );
+                transition: $transition-default;
+                transform-origin: 100% 0;
+            }
+
+            &:after {
+                position: absolute;
+                top: -65px;
+                right: -20px;
+                width: 100px;
+                height: 230px;
+
+                content: "";
+
+                background: url('/images/shape-4-mobile.svg') center/contain no-repeat;
+                
+                transform: scale( var(--v1, 0) );
+                transition: $transition-default;
+                
+                @include responsiveMin('mobile-v') {
+                    background: url('/images/shape-4.svg') center/contain no-repeat;
+                    top: -5px;
+                    right: -50%;
+                    width: 230px;
+                }
+            }
+        }
+    }
+
+    .section-toptitle {
+        position: relative;
+        left: -20px;
+        width: max-content;
+        padding: 25px 30px 22px 20px;
+        margin-bottom: 20px;
+        font-size: 22px;
+
+        background: linear-gradient(307deg, rgba(151, 29, 245, .70) -24.72%, rgba(151, 29, 245, .00) 130.32%);
+        @include fade(-100px, 0, true, 0);
+
+        @include responsiveMin('mobile-v') {
+            left: 0px;
+            padding: 35px 38px 22px;
+            margin-bottom: 40px;
+    
+            font-size: 43px;
+        }
+
+        &:before {
+            position: absolute;
+            top: -110px;
+            left: 265px;
+            width: 110px;
+            height: 110px;
+
+            content: "";
+
+            z-index: 5;
+            opacity: .6;
+            background: linear-gradient(311deg, #971DF5 -36.65%, rgba(53, 26, 117, 0.00) 158.58%);
+
+            @include responsiveMin('mobile-v') {
+                left: -300px;
+                top: -260px;
+    
+                width: 300px;
+                height: 260px;
+            }
+        }
+    }
+
+    .section-content {
+        position: relative;
+        margin-bottom: 25px;
+        @include fade(0,100px, true, 1);
+        
+        @include responsiveMin("tablet-h") {
+            margin-bottom: 0px;
+        }
+        
+        .section-text {
+            width: 90%;
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            
+            @include responsiveMin("mobile-v") {
+                width: 100%;
+                font-size: 22px;
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
+        }
+
+        .shape-content {
+            
+            position: absolute;
+            bottom: -495px;
+            left: 24%;
+            display: block;
+            width: 130px;
+            height: 50px;
+
+            background: linear-gradient(120deg, #971DF5 20.26%, rgba(151, 29, 245, 0.00) 104.35%);
+
+            @include responsiveMin('tablet-h') {
+                position: relative;
+                bottom: unset;
+                margin-top: 85px;
+                left: -10px;
+            }
+            
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50px;
+                left: -95px;
+                width: 95px;
+                height: 95px;
+                background: linear-gradient(311deg, #971DF5 -36.65%, rgba(53, 26, 117, 0.00) 158.58%);
+
+                @include responsiveMin('tablet-h') {
+                    top: 60px;
+                    left: -105px;
+                    width: 105px;
+                    height: 105px;
+                }
+            }
+
+
+            &:after {
+                position: absolute;
+                top: 65px;
+                left: 132%;
+                width: 90px;
+                height: 90px;
+    
+                content: "";
+    
+                background: url('/images/shape-5-mobile.svg') center/contain no-repeat;
+                
+                @include responsiveMin('tablet-h') {
+                    background: url('/images/shape-5.svg') center/contain no-repeat;
+                    top: -30px;
+                    left: 230px;
+                    width: 130px;
+                    height: 130px;
+            }
+            }
+        }
+    }
+
+    .responsive-form {
+        @include fade(0,100px, true, 2);
+        
+        .form-submit {
+            margin-top: -28px;
+            
+            @include responsiveMin('tablet-h') {
+                margin-top: -10px;
+            }
+        }
+    }
+}
