@@ -2224,13 +2224,6 @@ boolbase@^1.0.0:
   resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
 
-boom@0.3.x:
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/boom/-/boom-0.3.1.tgz"
-  integrity sha512-xWrlXnkK46TjEW7HU5G39AXWuG5aiHz3++zk3bBzF4mfnVCkpcYbwsnLUqMmfZNgPEYS/AI8MH+vmJxH5Kz0PA==
-  dependencies:
-    hoek "0.4.x"
-
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz"
@@ -2521,13 +2514,6 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
-
-cryptiles@0.1.x:
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/cryptiles/-/cryptiles-0.1.0.tgz"
-  integrity sha512-WiOGszxSaVHd8T4hlu5Xcqs2uUYxbvotBP171ag2pLPKSwSKeTJYnzd98/YWV3jQYk/rpMHa3r01cQfN8SZrHQ==
-  dependencies:
-    boom "0.3.x"
 
 css-select@^5.1.0:
   version "5.1.0"
@@ -3542,26 +3528,6 @@ hasown@^2.0.0:
   integrity sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==
   dependencies:
     function-bind "^1.1.2"
-
-hawk@~0.10.2:
-  version "0.10.2"
-  resolved "https://registry.npmjs.org/hawk/-/hawk-0.10.2.tgz"
-  integrity sha512-BjpmnZ95odv7KOIsydfNTAxfGOGaVc6xbYL4fozWl45PWjDqskix0LHAekmGkpnrCAI6+AZRvJIXNTAllj+e6w==
-  dependencies:
-    boom "0.3.x"
-    cryptiles "0.1.x"
-    hoek "0.7.x"
-    sntp "0.1.x"
-
-hoek@0.4.x:
-  version "0.4.2"
-  resolved "https://registry.npmjs.org/hoek/-/hoek-0.4.2.tgz"
-  integrity sha512-Yj/N2TCrS0d8jvZgUpq9sDNt8/ABwTxPJW4+8QT0KXCMxOtRfUCUTEZEYyvMSgfDT3MGvwgO+NHfWPobagAIug==
-
-hoek@0.7.x:
-  version "0.7.6"
-  resolved "https://registry.npmjs.org/hoek/-/hoek-0.7.6.tgz"
-  integrity sha512-z75muWk69yyjWn6nNzJP0pnfgcewtSTs7uBolGUA7kWNdCYZukzHn3sYqUirhXul7qp9WBUwNT/7ieJZNveJqg==
 
 hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.1, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
@@ -5070,13 +5036,6 @@ slash@^3.0.0:
   resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sntp@0.1.x:
-  version "0.1.2"
-  resolved "https://registry.npmjs.org/sntp/-/sntp-0.1.2.tgz"
-  integrity sha512-6fsOpJYQAQcO/UeW7T9mJwEenJymdU77o+gNiompGAammlSa+C49Oyt79ta/kgVbT13l4JAuKlo8FNvUnVjvEQ==
-  dependencies:
-    hoek "0.4.x"
-
 socket.io-client@~1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/socket.io-client/-/socket.io-client-1.0.6.tgz"
@@ -5147,6 +5106,7 @@ strict-uri-encode@^2.0.0:
   integrity sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
