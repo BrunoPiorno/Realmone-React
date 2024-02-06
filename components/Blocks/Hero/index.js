@@ -22,13 +22,13 @@ export const Hero = ({ data }) => {
             </div>
 
             {data.title &&  data.description && 
-            <div className="container container-sm">
-              <div className="row">
-                <h1 className="hero-text"><span>{data.title}</span></h1>
-                <h2 className="hero-desc">{data.description}</h2>
+              <div className="container container-sm">
+                <div className="row">
+                  <h1 className="hero-text"><span>{data.title}</span></h1>
+                  <h2 className="hero-desc">{data.description}</h2>
+                </div>
               </div>
-            </div>
-} 
+            } 
         </div>
       </Observer>
   );
